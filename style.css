@@ -43,7 +43,18 @@
                 background-color:Steelblue;
             }
             
-            
+            table {
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+.para{
+    width:300px;
+    font-size:12px;
+}
           
                 
            
