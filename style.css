@@ -47,14 +47,15 @@
   border-collapse: collapse;
 }
 
-table, td, th {
-  border: 1px solid black;
-}
-
-.para{
-    width:300px;
+    table, td, tr {
+         padding: 8px;
+         
+        }    
+    .para{
+    width:350px;
     font-size:12px;
-}
+    padding-top:8px;
+        }
           
                 
            
