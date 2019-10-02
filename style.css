@@ -46,7 +46,16 @@
     table, td, tr {
          padding: 8px;
         border: 1px solid black;
+
         }
+
+    table, td, tr {
+    width:375px
+    }
+
+    th{
+        height:400px
+    }
     .para{
     width:400px;
     font-size:12px;
