@@ -43,13 +43,9 @@
                 background-color:Steelblue;
             }
 
-            table {
-  border-collapse: collapse;
-}
-
     table, td, tr {
          padding: 8px;
-
+        border: 1px solid black;
         }
     .para{
     width:400px;
