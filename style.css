@@ -46,12 +46,9 @@
     table, td, tr {
          padding: 8px;
         border: 1px solid black;
-        width:350px;
+       
         }
 
-    table{
-    width:350px;
-    }
 
     .para{
     width:650px;
