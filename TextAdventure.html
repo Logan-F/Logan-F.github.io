@@ -12,7 +12,7 @@
                 bottom: 0px;
                 left:0px;
                 right: 0px;
-                background-color:green;
+                background-color:black;
 
             }
 
@@ -23,7 +23,7 @@
                 display:flex;
                 align-items:center;
                 justify-content:center;
-                background-color:red;
+                
 
             }
 
@@ -31,7 +31,7 @@
                 width:44%;
                 height: 100%;
                 float: left;
-                background-color:blue;
+                
 
             }
             #storytext{
@@ -40,10 +40,9 @@
                 top: 0px;
                 left: 56%;
                 right: 0px;
-                display: flex;
-                align-items: center;
                 justify-content: center;
-                background-color: pink;
+                
+                padding: 10px;
             }
             #choices{
                 position: absolute;
@@ -54,7 +53,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: yellow;
+                
             }
 
             #b1, #b2, #b3, #b4{
@@ -67,7 +66,24 @@
                 text-decoration: none;
                 margin: 8px;
             }
-
+            #storyimg{
+                max-height:99%;
+                max-width:99%;
+                width:99%;
+                
+            }
+            #ptext1{
+                color:white;
+            }
+            #ptext2{
+                color:white;
+            }
+            #ptext3{
+                color:white;
+            }
+            #ptext4{
+                color:white;
+            }
         </style>
     <body>
        <ul class="navbar">
@@ -87,20 +103,295 @@
        </ul>
 
         <div id='container'>
-            <div id='leftpane'>
+
+        <div id='leftpane'>
+            <img id='storyimg' src="images/village.jpg" >
+            
             </div>
 
             <div id='rightpane'>
                 <div id='storytext'>
+                    <p id='ptext1'>First Para </p>
+                    <p id='ptext2'>Second Para </p>
+                    <p id='ptext3'>Third Para </p>
+                    <p id='ptext4'>Fourth Para </p>
+                
+
                     </div>
                         <div id='choices'>
-                            <a id='b1' href="#"> Choice 1</a>
-                            <a id='b2' href="#"> Choice 2</a>
-                            <a id='b3' href="#"> Choice 4</a>
-                            <a id='b4' href="#"> Choice 4</a>
+                            <a id='b1' onclick="bclick(1)" href="#"> Choice 1</a>
+                            <a id='b2' onclick="bclick(2)" href="#"> Choice 2</a>
+                            <a id='b3' onclick="bclick(3)" href="#"> Choice 3</a>
+                            <a id='b4' onclick="bclick(4)" href="#"> Choice 4</a>
 
                          </div>
             </div>
         </div>
+
+        <script>
+            var pic = document.getElementById('storyimg');
+            var ptext1 = document.getElementById('ptext1');
+            var ptext2 = document.getElementById('ptext2');
+            var ptext3 = document.getElementById('ptext3');
+            var ptext4 = document.getElementById('ptext4');
+            var b1 = document.getElementById('b1');
+            var b2 = document.getElementById('b2');
+            var b3 = document.getElementById('b3');
+            var b4 = document.getElementById('b4');
+            var state = "intro";
+            intro();           
+           
+            function intro(){
+                pic.src = "images/village.jpg"
+                ptext1.innerHTML = "In 1860 lil Stuart was relaxing in his home. Not a weapon or piece of armor in sight. Then his village, Little Creek gets attacked by an Outlaw named Texas Red.";
+                ptext2.innerHTML = "Do you challenge Texas Red. As you are now?";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Yes";
+                b2.innerHTML = "No";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+
+            function live1(){
+                pic.src = "images/treestump.jpg"
+                ptext1.innerHTML = " Do you hide in the stump of a old tree?  ";
+                ptext2.innerHTML = "";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = " Yes ";
+                b2.innerHTML = " No";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            
+             function die1(){
+                pic.src = "images/youdied.jpg"
+                ptext1.innerHTML = "You get slain by and enemy.  ";
+                ptext2.innerHTML = "You should try again!";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Return to Beginning";
+                b2.innerHTML = "";
+                b1.style.display = "block";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function weapons(){
+                pic.src = "images/armory.jpg"
+                ptext1.innerHTML = "You successfuly hid for Texas Red and survuive .  ";
+                ptext2.innerHTML = "You go how to exact revenge and equip weapons";
+                ptext3.innerHTML = "What do you choose?";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Chicken Nugget Machine Gun";
+                b2.innerHTML = "You Dual Weild 2 HP Keyboards";
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function pathway(){
+                pic.src = "images/pathway.jpg"
+                ptext1.innerHTML = "You set out on your adventure and go down a pathway.";
+                ptext2.innerHTML = "Do you choose the ocean or jungle?";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Jungle";
+                b2.innerHTML = "Ocean"; 
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function attacker(){
+                pic.src = "images/pizza.jpg"
+                ptext1.innerHTML = "You go donwn the Jungle path and a Man Pizza jumps out of a bush and challenges you to fight.";
+                ptext2.innerHTML = "Do you accept?";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Yes, you attack";
+                b2.innerHTML = "No, you run"; 
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function portal(){
+                pic.src = "images/nether.jpg"
+                ptext1.innerHTML = "After defeating the Man Pizza you come across two large glowing portals";
+                ptext2.innerHTML = "Do you enter the Purple portal or do you enter the blue portal ";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "The purple one beacuse its cooler";
+                b2.innerHTML = "The blue one beacuse its also cool"; 
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function dragon(){
+                pic.src = "images/dragon.jpg"
+                ptext1.innerHTML = "After going throught the mind-blowing purple portal you appear before a enormous dragon";
+                ptext2.innerHTML = "Do you talk with the dragon?";
+                ptext3.innerHTML = "Do you try and fight the dragon?";
+                ptext4.innerHTML = "Do you run from the dragon?";
+                b1.innerHTML = "Talk";
+                b2.innerHTML = "Fight"; 
+                b3.innerHTML = "Run"
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "block";
+                b4.style.display = "none";
+            }
+            function finalBattle(){
+                pic.src = "images/dragon.jpg"
+                ptext1.innerHTML = "After getting a ride from the Legendary dragon Charizard you make it to Texas Reds base and find him waiting for you.";
+                ptext2.innerHTML = "Do you run from Texas Red?";
+                ptext3.innerHTML = "Do you fight Texas Red?";
+                ptext4.innerHTML = "Do you befriend Texas Red";
+                b1.innerHTML = "Run from your Texas Red";
+                b2.innerHTML = "Fight your Texas Red "; 
+                b3.innerHTML = "Befriend Texas Red"
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "block";
+                b4.style.display = "none";
+            }
+            function winner(){
+                pic.src = "images/.jpg"
+                ptext1.innerHTML = "You have an epic battle with Texas Red";
+                ptext2.innerHTML = "But you emerge VICTORIOUS";
+                ptext3.innerHTML = "Do you still want to free your friends and family?";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "No I dont care about them";
+                b2.innerHTML = "My epic journey has been for them (Yes)"; 
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function befriend(){
+                pic.src = "images/.jpg"
+                ptext1.innerHTML = "You decide to befriend Texas Red even after what he did to you";
+                ptext2.innerHTML = "You become Second in Command and Texas Reds closest ally and take over the rest of the plains together";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "Do you befriend Texas Red";
+                b1.innerHTML = "Run from your Texas Red";
+                b2.innerHTML = "Fight your Texas Red "; 
+                b3.innerHTML = "Befriend Texas Red"
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "block";
+                b4.style.display = "none";
+            }
+          
+
+          
+
+            //state machine    
+            function bclick(button){
+                if (state == "intro"){
+                    if(button == 1){
+                        live1();
+                        state = "live1"
+                    } 
+                    else if (button == 2){
+                        die1();
+                        state = "die1"
+                    } 
+                } 
+                  else if(state == "die1"){
+                    if(button == 1){
+                        intro();
+                        state = "intro"
+                    }
+                 }
+                 else if (state == "live1"){
+                    if(button == 1){
+                        weapons();
+                        state = "weapons"
+                    }
+                    else if(button == 2){
+                        die1();
+                        state = "die1"   
+                    }
+                }
+                else if(state == "weapons"){
+                    if(button == 1){
+                        pathway();
+                        state = "pathway"
+                    }
+                   else if(button == 2){
+                        pathway();
+                        state = "pathway"
+                    }
+                }
+                else if(state == "pathway"){
+                    if(button == 1){
+                        attacker();
+                        state = "attacker"
+                    }
+                    else if(button == 2){
+                        die1();
+                        state = "die1"
+                    }
+                }
+                else if(state == "attacker"){
+                    if(button == 1){
+                        portal();
+                        state = "portal"
+                    }
+                    else if(button == 2){
+                        die1();
+                        state = "die1"
+                    }
+                }
+                else if(state == "portal"){
+                    if(button == 1){
+                        dragon();
+                        state = "dragon"
+                    }
+                    else if(button == 2){
+                        die1();
+                        state = "die1"
+                    }
+                }
+                else if(state == "dragon"){
+                    if(button == 1){
+                        finalBattle();
+                        state = "finalBattle"
+                    }
+                    else if(button == 2){
+                        die();
+                        state = "die1"
+                    }
+                    else if(button == 3){
+                        die();
+                        state = "die1"
+                    }
+                }
+                else if(state == "finalBattle"){
+                    if(button == 2){
+                        winner();
+                        state = "winner"
+                    }
+                    else if(button == 1){
+                        die1();
+                        state = "die1"
+                    }
+                    else if(button == 3){
+                        befriend();
+                        state = "befriend"
+                    }
+                }
+               return false;
+            }
+            
+        </script>
     </body>
     </html>
