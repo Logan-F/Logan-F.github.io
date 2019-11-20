@@ -188,7 +188,7 @@
                 ptext2.innerHTML = "You go to your home and want to exact revenge so you go and a equip weapon";
                 ptext3.innerHTML = "What do you choose?";
                 ptext4.innerHTML = "";
-                b1.innerHTML = "Chicken Nugget Machine Gun";
+                b1.innerHTML = "Minecraft Diamond Sword";
                 b2.innerHTML = "You Dual Weild 2 HP Keyboards";
                 b1.style.display = "block";
                 b2.style.display = "block";
@@ -317,10 +317,10 @@
                 b4.style.display = "none";
             }
             function ship(){
-                pic.src = "images/.png"
+                pic.src = "images/ship.jpg"
                 ptext1.innerHTML = "You decide to take the ocean path and you are stranded at sea";
                 ptext2.innerHTML = "You pass out beacuse of lack of nutrion and awaken in a strage ship";
-                ptext3.innerHTML = "You are greeted by a many with peg leg and eye patch he says 'Aye mate wanna join our Pirate crew?'";
+                ptext3.innerHTML = "You are greeted by a many with peg leg and eye patch he says 'Aye matey wanna join our Pirate crew?'";
                 ptext4.innerHTML = "";
                 b1.innerHTML = " Join the Crew";
                 b2.innerHTML = " Refuse to join thier crew "; 
@@ -331,10 +331,10 @@
                 b4.style.display = "none";
             }
             function pirate(){
-                pic.src = "images/.png"
+                pic.src = "images/pirate.jpg"
                 ptext1.innerHTML = " You join thier pirate crew and go on countless adventures and collect mountians of Tresaure and go down as the Richest and Most Powerful crew in pirate history.";
                 ptext2.innerHTML = "";
-                ptext3.innerHTML = "'";
+                ptext3.innerHTML = "";
                 ptext4.innerHTML = "";
                 b1.innerHTML = " Restart Game";
                 b2.innerHTML = " "; 
@@ -344,6 +344,7 @@
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
+            
           
 
           
@@ -392,6 +393,16 @@
                         state = "attacker"
                     }
                     else if(button == 2){
+                        ship();
+                        state = "ship"
+                    }
+                }
+                else if(state == "ship"){
+                    if(button == 1){
+                        pirate();
+                        state = "pirate"
+                    }
+                    if(button == 2){
                         die1();
                         state = "die1"
                     }
@@ -459,10 +470,8 @@
                         intro();
                         state = "intro"
                     }
-                }
-                else if(state = "pathway"){
-                    if(button == 1)
-                }
+                 }
+
                return false;
             }
             
