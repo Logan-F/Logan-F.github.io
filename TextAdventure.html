@@ -157,8 +157,8 @@
 
             function live1(){
                 pic.src = "images/treestump.jpg"
-                ptext1.innerHTML = " Do you hide in the stump of a old tree?  ";
-                ptext2.innerHTML = "";
+                ptext1.innerHTML = "You try and find someplace to go and escape from Texas Red.  ";
+                ptext2.innerHTML = "Do you hide in the stump of a old tree?";
                 ptext3.innerHTML = "";
                 ptext4.innerHTML = "";
                 b1.innerHTML = " Yes ";
@@ -171,7 +171,7 @@
             
              function die1(){
                 pic.src = "images/youdied.jpg"
-                ptext1.innerHTML = "You get slain by and enemy.  ";
+                ptext1.innerHTML = "You get slain by an enemy.  ";
                 ptext2.innerHTML = "You should try again!";
                 ptext3.innerHTML = "";
                 ptext4.innerHTML = "";
@@ -184,8 +184,8 @@
             }
             function weapons(){
                 pic.src = "images/armory.jpg"
-                ptext1.innerHTML = "You successfuly hid for Texas Red and survuive .  ";
-                ptext2.innerHTML = "You go how to exact revenge and equip weapons";
+                ptext1.innerHTML = "You successfuly hid for Texas Red and survive .  ";
+                ptext2.innerHTML = "You go to your home and want to exact revenge so you go and a equip weapon";
                 ptext3.innerHTML = "What do you choose?";
                 ptext4.innerHTML = "";
                 b1.innerHTML = "Chicken Nugget Machine Gun";
@@ -197,8 +197,8 @@
             }
             function pathway(){
                 pic.src = "images/pathway.jpg"
-                ptext1.innerHTML = "You set out on your adventure and go down a pathway.";
-                ptext2.innerHTML = "Do you choose the ocean or jungle?";
+                ptext1.innerHTML = "You set out on your adventure and come across a fork in the road.";
+                ptext2.innerHTML = "Do you choose the Ocean or Jungle pathway?";
                 ptext3.innerHTML = "";
                 ptext4.innerHTML = "";
                 b1.innerHTML = "Jungle";
@@ -223,14 +223,40 @@
             }
             function portal(){
                 pic.src = "images/nether.jpg"
-                ptext1.innerHTML = "After defeating the Man Pizza you come across two large glowing portals";
-                ptext2.innerHTML = "Do you enter the Purple portal or do you enter the blue portal ";
+                ptext1.innerHTML = "After defeating the Man Pizza and following the paht more you come across two large glowing portals";
+                ptext2.innerHTML = "Do you enter the Purple portal or do you enter the blue portal";
                 ptext3.innerHTML = "";
                 ptext4.innerHTML = "";
                 b1.innerHTML = "The purple one beacuse its cooler";
                 b2.innerHTML = "The blue one beacuse its also cool"; 
                 b1.style.display = "block";
                 b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function moon(){
+                pic.src = "images/moon.jpg"
+                ptext1.innerHTML = "After going throught the blue portal you find yourself stranded in a colonized part of the moon";
+                ptext2.innerHTML = "What do you do?";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Give up and cry";
+                b2.innerHTML = "Explore"; 
+                b1.style.display = "block";
+                b2.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function explore(){
+                pic.src = "images/explore.jpg"
+                ptext1.innerHTML = " You explore the moon town and find no one and you live on the moon for the rest of your days with reget for how you didnt save your friends and family for Texas Red.";
+                ptext2.innerHTML = "";
+                ptext3.innerHTML = "";
+                ptext4.innerHTML = "";
+                b1.innerHTML = "Return To Beginning";
+                b2.innerHTML = ""; 
+                b1.style.display = "block";
+                b2.style.display = "none";
                 b3.style.display = "none";
                 b4.style.display = "none";
             }
@@ -248,8 +274,9 @@
                 b3.style.display = "block";
                 b4.style.display = "none";
             }
+
             function finalBattle(){
-                pic.src = "images/dragon.jpg"
+                pic.src = "images/challenger.jpg"
                 ptext1.innerHTML = "After getting a ride from the Legendary dragon Charizard you make it to Texas Reds base and find him waiting for you.";
                 ptext2.innerHTML = "Do you run from Texas Red?";
                 ptext3.innerHTML = "Do you fight Texas Red?";
@@ -263,9 +290,9 @@
                 b4.style.display = "none";
             }
             function winner(){
-                pic.src = "images/.jpg"
+                pic.src = "images/victory.jpg"
                 ptext1.innerHTML = "You have an epic battle with Texas Red";
-                ptext2.innerHTML = "But you emerge VICTORIOUS";
+                ptext2.innerHTML = "And you emerge VICTORIOUS";
                 ptext3.innerHTML = "Do you still want to free your friends and family?";
                 ptext4.innerHTML = "";
                 b1.innerHTML = "No I dont care about them";
@@ -276,17 +303,45 @@
                 b4.style.display = "none";
             }
             function befriend(){
-                pic.src = "images/.jpg"
+                pic.src = "images/skyrim.png"
                 ptext1.innerHTML = "You decide to befriend Texas Red even after what he did to you";
                 ptext2.innerHTML = "You become Second in Command and Texas Reds closest ally and take over the rest of the plains together";
                 ptext3.innerHTML = "";
-                ptext4.innerHTML = "Do you befriend Texas Red";
-                b1.innerHTML = "Run from your Texas Red";
-                b2.innerHTML = "Fight your Texas Red "; 
-                b3.innerHTML = "Befriend Texas Red"
+                ptext4.innerHTML = "";
+                b1.innerHTML = " Restart Game ";
+                b2.innerHTML = ""; 
+                b3.innerHTML = ""
+                b1.style.display = "block";
+                b2.style.display = "none";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function ship(){
+                pic.src = "images/.png"
+                ptext1.innerHTML = "You decide to take the ocean path and you are stranded at sea";
+                ptext2.innerHTML = "You pass out beacuse of lack of nutrion and awaken in a strage ship";
+                ptext3.innerHTML = "You are greeted by a many with peg leg and eye patch he says 'Aye mate wanna join our Pirate crew?'";
+                ptext4.innerHTML = "";
+                b1.innerHTML = " Join the Crew";
+                b2.innerHTML = " Refuse to join thier crew "; 
+                b3.innerHTML = ""
                 b1.style.display = "block";
                 b2.style.display = "block";
-                b3.style.display = "block";
+                b3.style.display = "none";
+                b4.style.display = "none";
+            }
+            function pirate(){
+                pic.src = "images/.png"
+                ptext1.innerHTML = " You join thier pirate crew and go on countless adventures and collect mountians of Tresaure and go down as the Richest and Most Powerful crew in pirate history.";
+                ptext2.innerHTML = "";
+                ptext3.innerHTML = "'";
+                ptext4.innerHTML = "";
+                b1.innerHTML = " Restart Game";
+                b2.innerHTML = " "; 
+                b3.innerHTML = ""
+                b1.style.display = "block";
+                b2.style.display = "none";
+                b3.style.display = "none";
                 b4.style.display = "none";
             }
           
@@ -351,14 +406,24 @@
                         state = "die1"
                     }
                 }
+                else if(state == "moon"){
+                    if(button == 1){
+                        die1();
+                        state = "die1"
+                    }
+                    else if(button == 2){
+                        explore();
+                        state = "explore"
+                    }
+                }
                 else if(state == "portal"){
                     if(button == 1){
                         dragon();
                         state = "dragon"
                     }
                     else if(button == 2){
-                        die1();
-                        state = "die1"
+                        moon();
+                        state = "moon"
                     }
                 }
                 else if(state == "dragon"){
@@ -367,11 +432,11 @@
                         state = "finalBattle"
                     }
                     else if(button == 2){
-                        die();
+                        die1();
                         state = "die1"
                     }
                     else if(button == 3){
-                        die();
+                        die1();
                         state = "die1"
                     }
                 }
@@ -388,6 +453,15 @@
                         befriend();
                         state = "befriend"
                     }
+                }
+                else if(state = "befriend"){
+                    if(button == 1 ){
+                        intro();
+                        state = "intro"
+                    }
+                }
+                else if(state = "pathway"){
+                    if(button == 1)
                 }
                return false;
             }
