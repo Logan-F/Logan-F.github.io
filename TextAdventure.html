@@ -210,7 +210,7 @@
             }
             function attacker(){
                 pic.src = "images/pizza.jpg"
-                ptext1.innerHTML = "You go donwn the Jungle path and a Man Pizza jumps out of a bush and challenges you to a fight.";
+                ptext1.innerHTML = "You go down the Jungle path and a Man Pizza jumps out of a bush and challenges you to a fight.";
                 ptext2.innerHTML = "Do you accept?";
                 ptext3.innerHTML = "";
                 ptext4.innerHTML = "";
@@ -262,7 +262,7 @@
             }
             function dragon(){
                 pic.src = "images/dragon.jpg"
-                ptext1.innerHTML = "After going through the purple portal you appear before a enormous dragon.";
+                ptext1.innerHTML = "After going through the purple portal you appear before an enormous dragon.";
                 ptext2.innerHTML = "Do you talk with the dragon?";
                 ptext3.innerHTML = "Do you try and fight the dragon?";
                 ptext4.innerHTML = "Do you run from the dragon?";
@@ -332,7 +332,7 @@
             }
             function pirate(){
                 pic.src = "images/pirate.jpg"
-                ptext1.innerHTML = " You join their pirate crew and go on countless adventures and collect mountians of Tresaure. You and your fellow pirate go down as the Richest and Most Powerful crew in pirate history.";
+                ptext1.innerHTML = " You join their pirate crew and go on countless adventures and collect mountians of Treasure. You and your fellow pirate go down as the Richest and Most Powerful crew in pirate history.";
                 ptext2.innerHTML = "";
                 ptext3.innerHTML = "";
                 ptext4.innerHTML = "";
@@ -352,11 +352,11 @@
             //state machine    
             function bclick(button){
                 if (state == "intro"){
-                    if(button == 1){
+                    if(button == 2){
                         live1();
                         state = "live1"
                     } 
-                    else if (button == 2){
+                    else if (button == 1){
                         die1();
                         state = "die1"
                     } 
